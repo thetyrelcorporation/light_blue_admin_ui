@@ -1,0 +1,478 @@
+%h2.page-title
+	Account Demo
+	%small Out of the box form
+.row
+	.col-md-7
+		%section.widget
+			%header
+				%h4
+					%i.fa.fa-user
+					Account Profile
+					%small Create new or edit existing user
+			.body
+				%form#user-form.form-horizontal.form-label-left{"data-parsley-excluded" => "input[name=gender]", "data-parsley-priority-enabled" => "false", :method => "post", :novalidate => "novalidate"}
+					.row
+						.col-sm-4
+							.text-align-center
+								= image_tag "15.jpg", class: "img-circle", style: "height:112px;"
+						.col-sm-8
+							%h3.mt-sm.mb-xs Maryna Gils
+							%address
+								%strong Development manager
+								at
+								%strong
+									%a{:href => "#"} Allexample Inc.
+								%br
+									%abbr{:title => "Work email"} e-mail:
+									%a{:href => "mailto:#"} maryna.gils@example.com
+									%br
+										%abbr{:title => "Work Phone"} phone:
+										(123) 456-7890
+					%fieldset.mt-sm
+						%legend
+							Account Edit Form
+							%small Some explanation text
+					%fieldset
+						%legend.section Personal Info
+						.form-group
+							%label.control-label.col-sm-4{:for => "prefix"} Prefix
+							.col-sm-4
+								%input#prefix.form-control.input-transparent{:name => "prefix", :type => "text"}/
+						.form-group
+							%label.control-label.col-sm-4{:for => "first-name"}
+								First Name
+								%span.required *
+							.col-sm-8
+								%input#first-name.form-control.input-transparent{:name => "first-name", :required => "required", :type => "text"}/
+						.form-group
+							%label.control-label.col-sm-4{:for => "last-name"}
+								Last Name
+								%span.required *
+							.col-sm-8
+								%input#last-name.form-control.input-transparent{:name => "last-name", :required => "required", :type => "text"}/
+						.form-group
+							%label.control-label.col-sm-4{:for => "middle-name"} Middle Name / Initial
+							.col-sm-8
+								%input#middle-name.form-control.input-transparent{:name => "middle-name", :type => "text", :value => ""}/
+						.form-group
+							%label.control-label.col-sm-4 Gender
+							.col-sm-8
+								#gender.btn-group{"data-toggle" => "buttons"}
+									%label.btn.btn-default{"data-toggle-class" => "btn-primary", "data-toggle-passive-class" => "btn-default"}
+										%input{:name => "gender", :type => "radio", :value => "male"}
+											\&nbsp; Male &nbsp;
+									%label.btn.btn-primary.active{"data-toggle-class" => "btn-primary", "data-toggle-passive-class" => "btn-default"}
+										%input{:checked => "", :name => "gender", :type => "radio", :value => "female"}
+											Female
+						.form-group
+							%label.control-label.col-sm-4{:for => "date-of-birth"}
+								Date Of Birth
+								%span.required *
+							.col-sm-6
+								%input#date-of-birth.date-picker.form-control.input-transparent{:name => "date-of-birth", :required => "required", :type => "text", :value => ""}/
+					%fieldset
+						%legend.section Contact Info
+						.form-group
+							%label#email-label.control-label.col-sm-4{:for => "email"}
+								Email
+								%span.required *
+							.col-xs-12.col-sm-6
+								.input-group
+									%input#email.form-control.input-transparent{"data-trigger" => "change", :name => "email", :required => "required", :type => "email"}
+										%span.input-group-btn
+											%button.btn.btn-success{:type => "button"} Write an email
+						.form-group
+							%label.control-label.col-sm-4{:for => "phone"}
+								Phone
+								%span.required *
+							.col-xs-12.col-sm-6
+								.input-group
+									%input#phone.form-control.input-transparent.mask{:maxlength => "28", :name => "phone", :required => "required", :type => "text"}
+										%span.input-group-btn
+											%select#phone-type.selectpicker{"data-style" => "btn-default", "data-width" => "auto"}
+												%option Mobile
+												%option Home
+												%option Work
+						.form-group
+							%label.control-label.col-sm-4{:for => "fax"} Fax
+							.col-xs-12.col-sm-6
+								.input-group
+									%input#fax.form-control.input-transparent{:maxlength => "28", :name => "phone", :type => "text"}
+										%span.input-group-btn
+											%select#fax-type.selectpicker{"data-style" => "btn-default", "data-width" => "auto"}
+												%option Mobile
+												%option Home
+												%option Work
+					%fieldset
+						%legend.section
+							Address
+							%button.btn.btn-transparent.btn-xs.pull-right{:type => "button"}
+								%i.fa.fa-plus
+								Add Address
+						.form-group
+							%label.control-label.col-sm-4{:for => "address"}
+								Address
+								%span.required *
+							.col-xs-12.col-sm-6
+								.input-group
+									%input#address.form-control.input-transparent{:name => "address", :type => "text"}
+										%span.input-group-btn
+											%select#address-type.selectpicker{"data-style" => "btn-default", "data-width" => "auto"}
+												%option Mobile
+												%option Home
+												%option Work
+								%input#address-2.form-control.input-transparent.mt-sm{:name => "address-2", :type => "text", :value => ""}
+						.form-group
+							%label.control-label.col-sm-4{:for => "city"}
+								City
+								%span.required *
+							.col-xs-12.col-sm-6
+								%input#city.form-control.input-transparent{:name => "city", :required => "required", :type => "text", :value => ""}/
+						.form-group
+							%label.control-label.col-sm-4{:for => "state"}
+								State
+								%span.required *
+							.col-sm-4
+								%select#state.select2.form-control{"data-placeholder" => "Select state", :name => "state", :required => "required"}
+									%option{:value => ""}
+									%option{:value => "AL"} Alabama
+									%option{:value => "AK"} Alaska
+									%option{:value => "AZ"} Arizona
+									%option{:value => "AR"} Arkansas
+									%option{:value => "CA"} California
+									%option{:value => "CO"} Colorado
+									%option{:value => "CT"} Connecticut
+									%option{:value => "DE"} Delaware
+									%option{:value => "DC"} District Of Columbia
+									%option{:value => "FL"} Florida
+									%option{:value => "GA"} Georgia
+									%option{:value => "HI"} Hawaii
+									%option{:value => "ID"} Idaho
+									%option{:value => "IL"} Illinois
+									%option{:value => "IN"} Indiana
+									%option{:value => "IA"} Iowa
+									%option{:value => "KS"} Kansas
+									%option{:value => "KY"} Kentucky
+									%option{:value => "LA"} Louisiana
+									%option{:value => "ME"} Maine
+									%option{:value => "MD"} Maryland
+									%option{:value => "MA"} Massachusetts
+									%option{:value => "MI"} Michigan
+									%option{:value => "MN"} Minnesota
+									%option{:value => "MS"} Mississippi
+									%option{:value => "MO"} Missouri
+									%option{:value => "MT"} Montana
+									%option{:value => "NE"} Nebraska
+									%option{:value => "NV"} Nevada
+									%option{:value => "NH"} New Hampshire
+									%option{:value => "NJ"} New Jersey
+									%option{:value => "NM"} New Mexico
+									%option{:value => "NY"} New York
+									%option{:value => "NC"} North Carolina
+									%option{:value => "ND"} North Dakota
+									%option{:value => "OH"} Ohio
+									%option{:value => "OK"} Oklahoma
+									%option{:value => "OR"} Oregon
+									%option{:value => "PA"} Pennsylvania
+									%option{:value => "RI"} Rhode Island
+									%option{:value => "SC"} South Carolina
+									%option{:value => "SD"} South Dakota
+									%option{:value => "TN"} Tennessee
+									%option{:value => "TX"} Texas
+									%option{:value => "UT"} Utah
+									%option{:value => "VT"} Vermont
+									%option{:value => "VA"} Virginia
+									%option{:value => "WA"} Washington
+									%option{:value => "WV"} West Virginia
+									%option{:value => "WI"} Wisconsin
+									%option{:value => "WY"} Wyoming
+						.form-group
+							%label.control-label.col-sm-4{:for => "country"}
+								Country
+								%span.required *
+							.col-sm-4
+								%select#country.select2.form-control{"data-placeholder" => "Select country", :name => "country", :required => "required"}
+									%option{:value => ""}
+									%option{:value => "United States"} United States
+									%option{:value => "United Kingdom"} United Kingdom
+									%option{:value => "Afghanistan"} Afghanistan
+									%option{:value => "Albania"} Albania
+									%option{:value => "Algeria"} Algeria
+									%option{:value => "American Samoa"} American Samoa
+									%option{:value => "Andorra"} Andorra
+									%option{:value => "Angola"} Angola
+									%option{:value => "Anguilla"} Anguilla
+									%option{:value => "Antarctica"} Antarctica
+									%option{:value => "Antigua and Barbuda"} Antigua and Barbuda
+									%option{:value => "Argentina"} Argentina
+									%option{:value => "Armenia"} Armenia
+									%option{:value => "Aruba"} Aruba
+									%option{:value => "Australia"} Australia
+									%option{:value => "Austria"} Austria
+									%option{:value => "Azerbaijan"} Azerbaijan
+									%option{:value => "Bahamas"} Bahamas
+									%option{:value => "Bahrain"} Bahrain
+									%option{:value => "Bangladesh"} Bangladesh
+									%option{:value => "Barbados"} Barbados
+									%option{:value => "Belarus"} Belarus
+									%option{:value => "Belgium"} Belgium
+									%option{:value => "Belize"} Belize
+									%option{:value => "Benin"} Benin
+									%option{:value => "Bermuda"} Bermuda
+									%option{:value => "Bhutan"} Bhutan
+									%option{:value => "Bolivia"} Bolivia
+									%option{:value => "Bosnia and Herzegovina"} Bosnia and Herzegovina
+									%option{:value => "Botswana"} Botswana
+									%option{:value => "Bouvet Island"} Bouvet Island
+									%option{:value => "Brazil"} Brazil
+									%option{:value => "British Indian Ocean Territory"} British Indian Ocean Territory
+									%option{:value => "Brunei Darussalam"} Brunei Darussalam
+									%option{:value => "Bulgaria"} Bulgaria
+									%option{:value => "Burkina Faso"} Burkina Faso
+									%option{:value => "Burundi"} Burundi
+									%option{:value => "Cambodia"} Cambodia
+									%option{:value => "Cameroon"} Cameroon
+									%option{:value => "Canada"} Canada
+									%option{:value => "Cape Verde"} Cape Verde
+									%option{:value => "Cayman Islands"} Cayman Islands
+									%option{:value => "Central African Republic"} Central African Republic
+									%option{:value => "Chad"} Chad
+									%option{:value => "Chile"} Chile
+									%option{:value => "China"} China
+									%option{:value => "Christmas Island"} Christmas Island
+									%option{:value => "Cocos (Keeling) Islands"} Cocos (Keeling) Islands
+									%option{:value => "Colombia"} Colombia
+									%option{:value => "Comoros"} Comoros
+									%option{:value => "Congo"} Congo
+									%option{:value => "Congo, The Democratic Republic of The"} Congo, The Democratic Republic of The
+									%option{:value => "Cook Islands"} Cook Islands
+									%option{:value => "Costa Rica"} Costa Rica
+									%option{:value => "Cote D'ivoire"} Cote D'ivoire
+									%option{:value => "Croatia"} Croatia
+									%option{:value => "Cuba"} Cuba
+									%option{:value => "Cyprus"} Cyprus
+									%option{:value => "Czech Republic"} Czech Republic
+									%option{:value => "Denmark"} Denmark
+									%option{:value => "Djibouti"} Djibouti
+									%option{:value => "Dominica"} Dominica
+									%option{:value => "Dominican Republic"} Dominican Republic
+									%option{:value => "Ecuador"} Ecuador
+									%option{:value => "Egypt"} Egypt
+									%option{:value => "El Salvador"} El Salvador
+									%option{:value => "Equatorial Guinea"} Equatorial Guinea
+									%option{:value => "Eritrea"} Eritrea
+									%option{:value => "Estonia"} Estonia
+									%option{:value => "Ethiopia"} Ethiopia
+									%option{:value => "Falkland Islands (Malvinas)"} Falkland Islands (Malvinas)
+									%option{:value => "Faroe Islands"} Faroe Islands
+									%option{:value => "Fiji"} Fiji
+									%option{:value => "Finland"} Finland
+									%option{:value => "France"} France
+									%option{:value => "French Guiana"} French Guiana
+									%option{:value => "French Polynesia"} French Polynesia
+									%option{:value => "French Southern Territories"} French Southern Territories
+									%option{:value => "Gabon"} Gabon
+									%option{:value => "Gambia"} Gambia
+									%option{:value => "Georgia"} Georgia
+									%option{:value => "Germany"} Germany
+									%option{:value => "Ghana"} Ghana
+									%option{:value => "Gibraltar"} Gibraltar
+									%option{:value => "Greece"} Greece
+									%option{:value => "Greenland"} Greenland
+									%option{:value => "Grenada"} Grenada
+									%option{:value => "Guadeloupe"} Guadeloupe
+									%option{:value => "Guam"} Guam
+									%option{:value => "Guatemala"} Guatemala
+									%option{:value => "Guinea"} Guinea
+									%option{:value => "Guinea-bissau"} Guinea-bissau
+									%option{:value => "Guyana"} Guyana
+									%option{:value => "Haiti"} Haiti
+									%option{:value => "Heard Island and Mcdonald Islands"} Heard Island and Mcdonald Islands
+									%option{:value => "Holy See (Vatican City State)"} Holy See (Vatican City State)
+									%option{:value => "Honduras"} Honduras
+									%option{:value => "Hong Kong"} Hong Kong
+									%option{:value => "Hungary"} Hungary
+									%option{:value => "Iceland"} Iceland
+									%option{:value => "India"} India
+									%option{:value => "Indonesia"} Indonesia
+									%option{:value => "Iran, Islamic Republic of"} Iran, Islamic Republic of
+									%option{:value => "Iraq"} Iraq
+									%option{:value => "Ireland"} Ireland
+									%option{:value => "Israel"} Israel
+									%option{:value => "Italy"} Italy
+									%option{:value => "Jamaica"} Jamaica
+									%option{:value => "Japan"} Japan
+									%option{:value => "Jordan"} Jordan
+									%option{:value => "Kazakhstan"} Kazakhstan
+									%option{:value => "Kenya"} Kenya
+									%option{:value => "Kiribati"} Kiribati
+									%option{:value => "Korea, Democratic People's Republic of"} Korea, Democratic People's Republic of
+									%option{:value => "Korea, Republic of"} Korea, Republic of
+									%option{:value => "Kuwait"} Kuwait
+									%option{:value => "Kyrgyzstan"} Kyrgyzstan
+									%option{:value => "Lao People's Democratic Republic"} Lao People's Democratic Republic
+									%option{:value => "Latvia"} Latvia
+									%option{:value => "Lebanon"} Lebanon
+									%option{:value => "Lesotho"} Lesotho
+									%option{:value => "Liberia"} Liberia
+									%option{:value => "Libyan Arab Jamahiriya"} Libyan Arab Jamahiriya
+									%option{:value => "Liechtenstein"} Liechtenstein
+									%option{:value => "Lithuania"} Lithuania
+									%option{:value => "Luxembourg"} Luxembourg
+									%option{:value => "Macao"} Macao
+									%option{:value => "Macedonia, The Former Yugoslav Republic of"} Macedonia, The Former Yugoslav Republic of
+									%option{:value => "Madagascar"} Madagascar
+									%option{:value => "Malawi"} Malawi
+									%option{:value => "Malaysia"} Malaysia
+									%option{:value => "Maldives"} Maldives
+									%option{:value => "Mali"} Mali
+									%option{:value => "Malta"} Malta
+									%option{:value => "Marshall Islands"} Marshall Islands
+									%option{:value => "Martinique"} Martinique
+									%option{:value => "Mauritania"} Mauritania
+									%option{:value => "Mauritius"} Mauritius
+									%option{:value => "Mayotte"} Mayotte
+									%option{:value => "Mexico"} Mexico
+									%option{:value => "Micronesia, Federated States of"} Micronesia, Federated States of
+									%option{:value => "Moldova, Republic of"} Moldova, Republic of
+									%option{:value => "Monaco"} Monaco
+									%option{:value => "Mongolia"} Mongolia
+									%option{:value => "Montserrat"} Montserrat
+									%option{:value => "Morocco"} Morocco
+									%option{:value => "Mozambique"} Mozambique
+									%option{:value => "Myanmar"} Myanmar
+									%option{:value => "Namibia"} Namibia
+									%option{:value => "Nauru"} Nauru
+									%option{:value => "Nepal"} Nepal
+									%option{:value => "Netherlands"} Netherlands
+									%option{:value => "Netherlands Antilles"} Netherlands Antilles
+									%option{:value => "New Caledonia"} New Caledonia
+									%option{:value => "New Zealand"} New Zealand
+									%option{:value => "Nicaragua"} Nicaragua
+									%option{:value => "Niger"} Niger
+									%option{:value => "Nigeria"} Nigeria
+									%option{:value => "Niue"} Niue
+									%option{:value => "Norfolk Island"} Norfolk Island
+									%option{:value => "Northern Mariana Islands"} Northern Mariana Islands
+									%option{:value => "Norway"} Norway
+									%option{:value => "Oman"} Oman
+									%option{:value => "Pakistan"} Pakistan
+									%option{:value => "Palau"} Palau
+									%option{:value => "Palestinian Territory, Occupied"} Palestinian Territory, Occupied
+									%option{:value => "Panama"} Panama
+									%option{:value => "Papua New Guinea"} Papua New Guinea
+									%option{:value => "Paraguay"} Paraguay
+									%option{:value => "Peru"} Peru
+									%option{:value => "Philippines"} Philippines
+									%option{:value => "Pitcairn"} Pitcairn
+									%option{:value => "Poland"} Poland
+									%option{:value => "Portugal"} Portugal
+									%option{:value => "Puerto Rico"} Puerto Rico
+									%option{:value => "Qatar"} Qatar
+									%option{:value => "Reunion"} Reunion
+									%option{:value => "Romania"} Romania
+									%option{:value => "Russian Federation"} Russian Federation
+									%option{:value => "Rwanda"} Rwanda
+									%option{:value => "Saint Helena"} Saint Helena
+									%option{:value => "Saint Kitts and Nevis"} Saint Kitts and Nevis
+									%option{:value => "Saint Lucia"} Saint Lucia
+									%option{:value => "Saint Pierre and Miquelon"} Saint Pierre and Miquelon
+									%option{:value => "Saint Vincent and The Grenadines"} Saint Vincent and The Grenadines
+									%option{:value => "Samoa"} Samoa
+									%option{:value => "San Marino"} San Marino
+									%option{:value => "Sao Tome and Principe"} Sao Tome and Principe
+									%option{:value => "Saudi Arabia"} Saudi Arabia
+									%option{:value => "Senegal"} Senegal
+									%option{:value => "Serbia and Montenegro"} Serbia and Montenegro
+									%option{:value => "Seychelles"} Seychelles
+									%option{:value => "Sierra Leone"} Sierra Leone
+									%option{:value => "Singapore"} Singapore
+									%option{:value => "Slovakia"} Slovakia
+									%option{:value => "Slovenia"} Slovenia
+									%option{:value => "Solomon Islands"} Solomon Islands
+									%option{:value => "Somalia"} Somalia
+									%option{:value => "South Africa"} South Africa
+									%option{:value => "South Georgia and The South Sandwich Islands"} South Georgia and The South Sandwich Islands
+									%option{:value => "Spain"} Spain
+									%option{:value => "Sri Lanka"} Sri Lanka
+									%option{:value => "Sudan"} Sudan
+									%option{:value => "Suriname"} Suriname
+									%option{:value => "Svalbard and Jan Mayen"} Svalbard and Jan Mayen
+									%option{:value => "Swaziland"} Swaziland
+									%option{:value => "Sweden"} Sweden
+									%option{:value => "Switzerland"} Switzerland
+									%option{:value => "Syrian Arab Republic"} Syrian Arab Republic
+									%option{:value => "Taiwan, Province of China"} Taiwan, Province of China
+									%option{:value => "Tajikistan"} Tajikistan
+									%option{:value => "Tanzania, United Republic of"} Tanzania, United Republic of
+									%option{:value => "Thailand"} Thailand
+									%option{:value => "Timor-leste"} Timor-leste
+									%option{:value => "Togo"} Togo
+									%option{:value => "Tokelau"} Tokelau
+									%option{:value => "Tonga"} Tonga
+									%option{:value => "Trinidad and Tobago"} Trinidad and Tobago
+									%option{:value => "Tunisia"} Tunisia
+									%option{:value => "Turkey"} Turkey
+									%option{:value => "Turkmenistan"} Turkmenistan
+									%option{:value => "Turks and Caicos Islands"} Turks and Caicos Islands
+									%option{:value => "Tuvalu"} Tuvalu
+									%option{:value => "Uganda"} Uganda
+									%option{:value => "Ukraine"} Ukraine
+									%option{:value => "United Arab Emirates"} United Arab Emirates
+									%option{:value => "United Kingdom"} United Kingdom
+									%option{:value => "United States"} United States
+									%option{:value => "United States Minor Outlying Islands"} United States Minor Outlying Islands
+									%option{:value => "Uruguay"} Uruguay
+									%option{:value => "Uzbekistan"} Uzbekistan
+									%option{:value => "Vanuatu"} Vanuatu
+									%option{:value => "Venezuela"} Venezuela
+									%option{:value => "Viet Nam"} Viet Nam
+									%option{:value => "Virgin Islands, British"} Virgin Islands, British
+									%option{:value => "Virgin Islands, U.S."} Virgin Islands, U.S.
+									%option{:value => "Wallis and Futuna"} Wallis and Futuna
+									%option{:value => "Western Sahara"} Western Sahara
+									%option{:value => "Yemen"} Yemen
+									%option{:value => "Zambia"} Zambia
+									%option{:value => "Zimbabwe"} Zimbabwe
+					.form-actions
+						.row
+							.col-sm-8.col-sm-offset-4
+								%button.btn.btn-primary{:type => "submit"} Validate &amp; Submit
+								%button.btn.btn-default{:type => "button"} Cancel
+	.col-md-5
+		%section.widget
+			%header
+				%h4
+					%i.fa.fa-cogs
+					Account settings
+				.actions
+					%button.btn.btn-xs.btn-inverse
+						%i.fa.fa-arrow-down
+						View more
+			.body
+				%form{:method => "post"}
+					%fieldset
+						.form-group
+							%label{:for => "exp"} Account expiration date
+							%input#exp.form-control.date-picker{:name => "exp", :type => "text", :value => ""}
+								%p.help-block Bootstrap datepicker
+						.form-group
+							%label{:for => "website"} Associate to Website
+							%select#website.select2.select-block-level{"data-minimum-results-for-search" => "10", "data-width" => "off", :name => "website"}
+								%option{:selected => "selected", :value => "0"} Admin
+								%option{:value => "1"} Main Website
+						.form-group
+							%label{:for => "created_by"} Created By
+							%input#created_by.form-control{:disabled => "disabled", :name => "created_by", :type => "text", :value => "Admin"}
+						.form-group
+							%label{:for => "groups"} Account Group
+							%select#groups.select2.select-block-level{"data-placeholder" => "Choose one or more groups for account", "data-width" => "off", :multiple => "", :name => "groups"}
+								%option{:value => "0"} Subscriber
+								%option{:value => "1"} Retailer
+								%option{:value => "2"} Supplier
+								%option{:value => "3"} Manager
+						.form-group
+							.checkbox
+								%input#change-password{:name => "change-password", :type => "checkbox"}
+									%label.checkbox{:for => "change-password"}
+										Request password change

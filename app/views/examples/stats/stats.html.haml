@@ -1,0 +1,171 @@
+%h2.page-title
+	Basic Stats
+	%small Tiles, bars and more
+.row
+	.col-md-2.col-sm-4.col-xs-6
+		.box
+			.icon
+				%i.fa.fa-calendar
+			.description
+				%strong 14
+				meetings
+	.col-md-2.col-sm-4.col-xs-6
+		.box
+			.big-text
+				3.28%
+			.description
+				%i.fa.fa-user
+				User Growth
+	.col-md-2.col-sm-4.col-xs-6
+		.box
+			.icon
+				%i.fa.fa-user
+			.description
+				%strong 643
+				customers
+	.col-md-2.col-sm-4.col-xs-6
+		.box
+			.big-text
+				+512
+			.description
+				%i.fa.fa-comments
+				Comments
+	.col-md-2.col-sm-4.col-xs-6
+		.box
+			.icon
+				%i.fa.fa-shopping-cart
+			.description
+				%strong 410
+				orders
+	.col-md-2.col-sm-4.col-xs-6
+		.box
+			.big-text
+				6.42%
+			.description
+				%i.fa.fa-arrow-right
+				Traffic Growth
+.row
+	.col-md-4
+		%section.widget.normal
+			%header
+				%h4
+					%i.fa.fa-arrow-right
+					Progressbars
+			.body
+				%h5.mt-0.mb-xs.weight-normal Simple one
+				.progress
+					.progress-bar{:style => "width: 60%;"}
+				%h5.mt-0.mb-xs.weight-normal Styled ones
+				.progress
+					.progress-bar.progress-bar-inverse{:style => "width: 33%;"}
+				.progress
+					.progress-bar.progress-bar-warning{:style => "width: 52%;"}
+				.progress
+					.progress-bar.progress-bar-danger{:style => "width: 43%;"}
+	.col-md-4
+		%section.widget.normal
+			%header
+				%h4
+					%i.fa.fa-caret-right
+					Small ones
+			.body
+				%h5.mt-0.mb-xs.weight-normal Colors
+				.progress.progress-small
+					.progress-bar.progress-bar-inverse{:style => "width: 23%;"}
+				.progress.progress-small
+					.progress-bar.progress-bar-warning{:style => "width: 76%;"}
+				.progress.progress-small
+					.progress-bar.progress-bar-success{:style => "width: 43%;"}
+				.progress.progress-small
+					.progress-bar.progress-bar-danger{:style => "width: 53%;"}
+				%h5.mt-0.mb-xs.weight-normal Default progressbar
+				.progress.progress-small
+					.progress-bar{:style => "width: 60%;"}
+	.col-md-4
+		%section.widget.normal
+			%header
+				%h4
+					%i.fa.fa-angle-right
+					Some extensions
+			.body
+				%h5.mt-0.mb-xs.weight-normal With embedded percentage
+				.progress
+					.progress-bar{:style => "width: 79%;"} 79%
+				%h5.mt-0.mb-xs.weight-normal Active one
+				.progress.progress-striped.active
+					.progress-bar.progress-bar-warning{:style => "width: 51%;"} 51%
+				%h5.mt-0.mb-xs.weight-normal Inversed progress-bar
+				.progress.progress-striped.active
+					.progress-bar.progress-bar-inverse{:style => "width: 64%;"} 64%
+.row
+	.col-md-3.col-md-offset-3
+		%section.widget
+			%header
+				%h4
+					%i.fa.fa-magnet
+					Server Overview
+			.body
+				%ul.server-stats
+					%li
+						.key.pull-right CPU
+						.stat
+							.info 60% / 37&deg;C / 3.3 Ghz
+							.progress.progress-small
+								.progress-bar{:style => "width: 70%;"}
+					%li
+						.key.pull-right Mem
+						.stat
+							.info 29% / 4GB (16 GB)
+							.progress.progress-small
+								.progress-bar.progress-bar-warning{:style => "width: 29%;"}
+					%li
+						.key.pull-right LAN
+						.stat
+							.info
+								6 Mb/s
+								%i.fa.fa-caret-down
+								\&nbsp; 3 Mb/s
+								%i.fa.fa-caret-up
+							.progress.progress-small
+								.progress-bar.progress-bar-danger{:style => "width: 48%;"}
+					%li
+						.key.pull-right Access
+						.stat
+							.info
+								17 Mb/s
+								%i.fa.fa-caret-up
+								\&nbsp; (+18%)
+							.progress.progress-small
+								.progress-bar.progress-bar-success{:style => "width: 64%;"}
+	.col-md-3
+		%section.widget.widget-overview
+			%header
+				%h4
+					%i.fa.fa-lightbulb
+					Stats Overview
+			.body
+				%ul.overall-stats
+					%li
+						.icon.pull-left
+							%i.fa.fa-user
+						%span.key Total Users
+						.value.pull-right
+							%span.badge.badge-danger 7 541
+					%li
+						.icon.pull-left
+							%i.fa.fa-shopping-cart
+						%span.key Total Orders
+						.value.pull-right
+							%span.badge.badge-warning 2 876
+					%li
+						.icon.pull-left
+							%i.fa.fa-desktop
+						%span.key Desktop
+						.value.pull-right
+							%span.badge.badge-info 68%
+					%li
+						.icon.pull-left
+							%i.fa.fa-phone
+						%span.key Mobile
+						.value.pull-right
+							%span.badge.badge-default 32%

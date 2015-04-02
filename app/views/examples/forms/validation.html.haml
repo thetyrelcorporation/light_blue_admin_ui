@@ -1,0 +1,68 @@
+%h2.page-title
+	Validation
+	%small Form validation
+.row
+	.col-md-7
+		%section.widget
+			%header
+				%h4
+					%i.fa.fa-check-square-o
+					Dead simple validation
+					%small No JS needed to tune-up
+			.body
+				%form#validation-form.form-horizontal.form-label-left{"data-parsley-priority-enabled" => "false", :method => "post", :novalidate => "novalidate"}
+					%fieldset
+						%legend.section
+							By default validation is started only after at least 3 characters have been input.
+						.form-group
+							%label.control-label.col-md-4{:for => "basic"} Simple required
+							.col-md-5
+								%input#basic.form-control.input-transparent{:name => "basic", :required => "required", :type => "text"}
+						.form-group
+							%label.control-label.col-md-4{:for => "basic-change"}
+								Min-length On Change
+								%span.help-block
+									At least 10
+							.col-md-5
+								%input#basic-change.form-control.input-transparent{"data-parsley-minlength" => "10", "data-parsley-trigger" => "change", :name => "basic-change", :required => "required", :type => "text"}
+					%fieldset
+						%legend.section
+							%span.label.label-important
+								HTML5
+							input types supported
+						.form-group
+							%label.control-label.col-md-4{:for => "email"}
+								E-mail
+							.col-md-5
+								%input#email.form-control.input-transparent{"data-parsley-trigger" => "change", "data-parsley-validation-threshold" => "1", :name => "email", :required => "required", :type => "email"}
+						.form-group
+							%label.control-label.col-md-4{:for => "number"}
+								Number
+							.col-md-5
+								%input#number.form-control.input-transparent{"data-parsley-type" => "number", :name => "number", :required => "required", :type => "text"}
+						.form-group
+							%label.control-label.col-md-4{:for => "range"}
+								Range
+							.col-md-5
+								%input#range.form-control.input-transparent{"data-parsley-range" => "[10, 100]", "data-parsley-trigger" => "change", "data-parsley-validation-threshold" => "1", :name => "range", :required => "required", :type => "text"}
+					%fieldset
+						%legend.section
+							More validation
+						.form-group
+							%label.control-label.col-md-4{:for => "password"}
+								Password helpers
+							.col-md-5
+								%input#password.form-control.input-transparent{"data-parsley-minlength" => "6", "data-parsley-trigger" => "change", :name => "password", :required => "required", :type => "password"}
+									%input#password-r.form-control.input-transparent.mt-sm{"data-parsley-equalto" => "#password", "data-parsley-minlength" => "6", "data-parsley-trigger" => "change", :name => "password-r", :required => "required", :type => "password"}
+						.form-group
+							%label.control-label.col-md-4{:for => "website"}
+								Website
+							.col-md-5
+								%input#website.form-control.input-transparent{"data-parsley-trigger" => "change", "data-parsley-type" => "url", :name => "website", :required => "required", :type => "text"}
+					.form-actions
+						.row
+							.col-md-8.col-md-offset-4
+								%button.btn.btn-danger{:type => "submit"} Validate &amp; Submit
+								%button.btn.btn-default{:type => "button"} Cancel
+.loader-wrap.hiding.hide
+%i.fa.fa-circle-o-notch.fa-spin

@@ -1,0 +1,95 @@
+%h2.page-title
+	Dialogs
+	%small Normal & blocking dialog
+.row
+	.col-md-5.col-md-offset-1
+		%section.widget
+			%header
+				%h5
+					%i.fa.fa-magic
+					Dialogs
+			.body
+				.modal{:style => "position: relative; top: auto; right: auto; left: auto; bottom: auto; z-index: 1; display: block; overflow: hidden;"}
+					.modal-dialog{:style => "width: auto; padding: 0;"}
+						.modal-content
+							.modal-header
+								%button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+								%h4.modal-title Modal title
+							.modal-body
+								%p One fine body…
+							.modal-footer
+								%button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Close
+								%button.btn.btn-primary{:type => "button"} Save changes
+						/ /.modal-content
+					/ /.modal-dialog
+	.col-md-5
+		%section.widget
+			%header
+				%h5
+					%i.fa.fa-bolt
+					Live Demo
+			.body
+				%button.btn.btn-danger.btn-lg.btn-block{"data-target" => "#myModal", "data-toggle" => "modal", :type => "button"} Launch modal
+				#myModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :style => "display: none;", :tabindex => "-1"}
+					.modal-dialog
+						.modal-content
+							.modal-header
+								%button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+								%h4#myModalLabel.modal-title Modal Heading
+							.modal-body
+								%h4 Text in a modal
+								%p Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+								%h4 Popover in a modal
+								%p
+									This
+									%a.btn.btn-default.popover-test{"data-content" => "And here's some amazing content. It's very engaging. right?", "data-original-title" => "A Title", :href => "#", :role => "button", :title => ""} button
+									should trigger a popover on click.
+								%h4 Tooltips in a modal
+								%p
+									%a.tooltip-test{"data-original-title" => "Tooltip", :href => "#", :title => ""} This link
+									and
+									%a.tooltip-test{"data-original-title" => "Tooltip", :href => "#", :title => ""} that link
+									should have tooltips on hover.
+								%hr
+									%h4 Blah blah blah text
+									%p Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+									%p Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+							.modal-footer
+								%button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Close
+								%button.btn.btn-primary{:type => "button"} Save changes
+						/ /.modal-content
+					/ /.modal-dialog
+		%section.widget
+			%header
+				%h5
+					%i.fa.fa-ban
+					Blocking one
+			.body
+				%button.btn.btn-warning.btn-lg.btn-block{"data-backdrop" => "static", "data-target" => "#myModal2", "data-toggle" => "modal", :type => "button"} Launch blocking modal
+				#myModal2.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :style => "display: none;", :tabindex => "-1"}
+					.modal-dialog
+						.modal-content
+							.modal-header
+								%button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+								%h4#myModalLabel2.modal-title Modal Heading
+							.modal-body
+								%h4 Text in a modal
+								%p Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+								%h4 Popover in a modal
+								%p
+									This
+									%a.btn.btn-default.popover-test{"data-content" => "And here's some amazing content. It's very engaging. right?", "data-original-title" => "A Title", :href => "#", :role => "button", :title => ""} button
+									should trigger a popover on click.
+								%h4 Tooltips in a modal
+								%p
+									%a.tooltip-test{"data-original-title" => "Tooltip", :href => "#", :title => ""} This link
+									and
+									%a.tooltip-test{"data-original-title" => "Tooltip", :href => "#", :title => ""} that link
+									should have tooltips on hover.
+								%hr
+									%h4 Blah blah blah text
+									%p Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+									%p Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+							.modal-footer
+								%button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Close
+								%button.btn.btn-primary{:type => "button"} Save changes

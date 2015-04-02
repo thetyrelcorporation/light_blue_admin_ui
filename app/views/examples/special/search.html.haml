@@ -1,0 +1,153 @@
+%h2.page-title
+	Matching -
+	%span.fw-semi-bold Results
+.clearfix
+	.btn-toolbar
+		.btn-group
+			%a.btn.dropdown-toggle.btn-default{"data-toggle" => "dropdown", :href => "#"}
+				Popular
+				%span.caret
+			%ul.dropdown-menu
+				%li
+					%a{:href => "#"} All
+				%li
+					%a{:href => "#"} Popular
+				%li
+					%a{:href => "#"} Interesting
+				%li
+					%a{:href => "#"} Latest
+		.btn-group
+			%a.btn.dropdown-toggle.btn-default{"data-toggle" => "dropdown", :href => "#"}
+				All Time
+				%span.caret
+			%ul.dropdown-menu
+				%li
+					%a{:href => "#"} Last 24h
+				%li
+					%a{:href => "#"} Last Month
+				%li
+					%a{:href => "#"} Last Year
+		.btn-group.pull-right
+			%button.btn.btn-transparent.active{:type => "button"}
+				%i.fa.fa-th-list
+			%button.btn.btn-transparent{:type => "button"}
+				%i.fa.fa-th-large
+.row
+	.col-lg-3.col-lg-push-9
+		%h4
+			Results
+			%span.fw-semi-bold Filtering
+		%p.text-muted Listed content is categorized by the following groups:
+		%ul.nav.nav-pills.nav-stacked.search-result-categories.mt
+			%li
+				%a{:href => "#"}
+					Hot Ideas
+					%span.badge.bg-gray.fw-semi-bold 34
+			%li
+				%a{:href => "#"}
+					Latest Pictures
+					%span.badge.bg-gray.fw-semi-bold 9
+			%li
+				%a{:href => "#"} Labels of Day
+			%li
+				%a{:href => "#"}
+					Recent Movies
+			%li
+				%a{:href => "#"}
+					Globals
+					%span.badge.bg-gray.fw-semi-bold 18
+	.col-lg-9.col-lg-pull-3
+		%p.search-results-count About 94 700 000 (0.39 sec.) results
+		%section.search-result-item
+			%a.image-link{:href => "#"}
+				%img.image{:src => asset_path("1.jpg")}
+			.search-result-item-body
+				.row
+					.col-sm-9
+						%h4.search-result-item-heading
+							%a{:href => "#"} Next generation admin template
+						%p.info
+							New York, NY 20188
+						%p.description
+							Not just usual Metro. But something bigger. Not just usual widgets, but real
+							widgets. Not just yet another admin template, but next generation admin template.
+					.col-sm-3.text-align-center
+						%p.value3.mt-sm
+							$9, 700
+						%p.fs-mini.text-muted
+							PER WEEK
+						%a.btn.btn-primary.btn-info.btn-sm{:href => "#"} Learn More
+		%section.search-result-item
+			%a.image-link{:href => "#"}
+				%img.image{:src => asset_path("6.jpg")}
+			.search-result-item-body
+				.row
+					.col-sm-9
+						%h4.search-result-item-heading
+							%a{:href => "#"} Try. Posted by Okendoken
+							%span.badge.bg-danger.fw-normal Best Deal!
+						%p.info
+							Los Angeles, NY 20188
+						%p.description
+							You will never know exactly how something will go until you try it. You can
+							think three hundred times and still have no precise result.
+					.col-sm-3.text-align-center
+						%p.value3.mt-sm
+							$10, 300
+						%p.fs-mini.text-muted
+							PER WEEK
+						%a.btn.btn-primary.btn-info.btn-sm{:href => "#"} Learn More
+		%section.search-result-item
+			%a.image-link{:href => "#"}
+				%img.image{:src => asset_path("10.jpg")}
+			.search-result-item-body
+				.row
+					.col-sm-9
+						%h4.search-result-item-heading
+							%a{:href => "#"} Vitaut the Great
+						%p.info
+							New York, NY 20188
+						%p.description
+							The Great Prince of the Grand Duchy of Lithuania he had stopped the invasion to
+							Europe of Timur (Tamerlan) from Asia heading a big Army of Belarusians, Lithuanians.
+					.col-sm-3.text-align-center
+						%p.value3.mt-sm
+							$3, 200
+						%p.fs-mini.text-muted
+							PER WEEK
+						%a.btn.btn-info.btn-sm{:href => "#"} Learn More
+		%section.search-result-item
+			%a.image-link{:href => "#"}
+				%img.image{:src => asset_path("5.jpg")}
+			.search-result-item-body
+				.row
+					.col-sm-9
+						%h4.search-result-item-heading
+							%a{:href => "#"} Can I use CSS3 Radial-Gradient?
+						%p.info
+							Minsk, NY 20188
+						%p.description
+							Yes you can! Further more, you should! It let's you create really beautiful images
+							either for elements or for the entire background.
+					.col-sm-3.text-align-center
+						%p.value3.mt-sm
+							$2, 400
+						%p.fs-mini.text-muted
+							PER MONTH
+						%a.btn.btn-info.btn-sm{:href => "#"} Learn More
+		.text-align-center
+			%ul.pagination.pagination-sm.pagination-search-result
+				%li.disabled
+					%a{:href => "#"} Prev
+				%li.active
+					%a{:href => "#"} 1
+				%li
+					%a{:href => "#"} 2
+				%li
+					%a{:href => "#"} 3
+				%li
+					%a{:href => "#"} 4
+				%li
+					%a{:href => "#"} 5
+				%li
+					%a{:href => "#"} Next

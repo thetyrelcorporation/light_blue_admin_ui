@@ -1,0 +1,120 @@
+%ol.breadcrumb
+	%li YOU ARE HERE
+	%li.active Bootstrap Components
+%h2.page-title
+	Components -
+	%span.fw-semi-bold Bootstrap
+	%small Built-in components
+.row
+	.col-md-6
+		%section.widget
+			.jumbotron
+				.container
+					%h1 Hello, world!
+					%p.lead
+						%em Amazing
+						content
+					%p
+						%a.btn.btn-danger.btn-lg
+							Join now! &nbsp;
+							%i.fa.fa-check
+		%section.widget
+			.list-group
+				%a.list-group-item{:href => "#"}
+					%i.fa.fa-chevron-right.pull-right
+					%span.badge.badge-success 14
+					= succeed "&amp;nbsp;" do
+						%i.fa.fa-envelope-o
+					Inbox
+				%a.list-group-item{:href => "#"}
+					%i.fa.fa-chevron-right.pull-right
+					%span.badge.badge-danger 2
+					= succeed "&amp;nbsp;" do
+						%i.fa.fa-eye
+					Visits
+				%a.list-group-item{:href => "#"}
+					%i.fa.fa-chevron-right.pull-right
+					%span.badge.badge-default 12
+					= succeed "&amp;nbsp;" do
+						%i.fa.fa-phone
+					Incoming calls
+				%a.list-group-item{:href => "#"}
+					%i.fa.fa-chevron-right.pull-right
+					%span.badge.badge-info 20
+					= succeed "&amp;nbsp;" do
+						%i.fa.fa-bell
+					Notifications
+				%a.list-group-item{:href => "#"}
+					%i.fa.fa-chevron-right.pull-right
+					%span.badge.badge-warning 7
+					= succeed "&amp;nbsp;" do
+						%i.fa.fa-comments
+					Messages
+	.col-md-6
+		.widget
+			#carousel-example-generic.carousel.slide
+				%ol.carousel-indicators.outer
+					%li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
+					%li{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
+					%li{"data-slide-to" => "2", "data-target" => "#carousel-example-generic"}
+				.carousel-inner.text-align-center
+					.item.active
+						%h4.no-margin
+							%em Bootstrap 3
+						%p
+							%small Built-in Twitter Bootstrap 3 support
+					.item
+						%h4.no-margin
+							%em Developer-friendly
+						%p
+							%small Simple & intuitive code
+					.item
+						%h4.no-margin
+							%em Sass-powered
+						%p
+							%small Light Blue is really easy to customize
+				%a.left.carousel-control{"data-slide" => "prev", :href => "#carousel-example-generic"}
+					%i.fa.fa-angle-left
+				%a.right.carousel-control{"data-slide" => "next", :href => "#carousel-example-generic"}
+					%i.fa.fa-angle-right
+		.widget.text-align-center
+			%p
+				%span.label.label-default Default
+				%span.label.label-primary Primary
+				%span.label.label-success Success
+				%span.label.label-info Info
+				%span.label.label-warning Warning
+				%span.label.label-danger Danger
+			%p.no-margin
+				%span.badge.badge-default 20
+				%span.badge.badge-primary 30
+				%span.badge.badge-success 40
+				%span.badge.badge-info 50
+				%span.badge.badge-warning 60
+				%span.badge.badge-danger 70
+		.alert.alert-danger
+			%button.close{"aria-hidden" => "true", "data-dismiss" => "alert", :type => "button"} ×
+			%h4
+				%i.fa.fa-ban
+				%strong Oh snap! You got an error!
+			%p Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+			%p
+				%a.btn.btn-inverse.btn-sm{:href => "#"} Take this action
+		.alert.alert-success
+			%button.close{"aria-hidden" => "true", "data-dismiss" => "alert", :type => "button"} ×
+			%strong
+				%i.fa.fa-check
+				Well done!
+			You successfully read this important alert message.
+		.alert.alert-info
+			%button.close{"aria-hidden" => "true", "data-dismiss" => "alert", :type => "button"} ×
+			%strong
+				%i.fa.fa-info-circle
+				Heads up!
+			This alert needs your attention, but it's not super important.
+		.alert.alert-warning
+			%button.close{"aria-hidden" => "true", "data-dismiss" => "alert", :type => "button"} ×
+			%strong
+				%i.fa.fa-bell-o
+				Warning!
+			Best check yo self, you're not looking too good.

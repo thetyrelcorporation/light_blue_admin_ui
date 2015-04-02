@@ -1,0 +1,29 @@
+!!!
+%html
+	%head
+		%title Light Blue - Responsive Admin Dashboard Template
+		%link{:href => "img/favicon.png", :rel => "shortcut icon"}
+		%meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+		%meta{:content => "", :name => "description"}
+		%meta{:content => "", :name => "author"}
+		%meta{:charset => "utf-8"}
+		= stylesheet_link_tag 'application'
+		:javascript
+	%body.background-dark
+		.logo
+			%h4
+				%a{:href => "index.html"}
+					Light
+					%strong Blue
+		= render "examples/nav"
+		.wrap
+			= render "examples/header"
+			.content.container
+				= yield
+				.loader-wrap.hiding.hide
+					%i.fa.fa-circle-o-notch.fa-spin
+			.loader-wrap.hiding.hide
+				%i.fa.fa-circle-o-notch.fa-spin
+		= javascript_include_tag 'application'
+		= render "templates/all"
+		= render "examples/page_specific_js"

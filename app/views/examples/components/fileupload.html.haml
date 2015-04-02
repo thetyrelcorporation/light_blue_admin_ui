@@ -1,0 +1,38 @@
+%h2.page-title
+	Components -
+	%span.fw-semi-bold Fileupload
+	%small Drag & drop fileupload
+.row
+	.col-md-8.col-md-offset-1
+		%section.widget
+			.body
+				%form#fileupload{:action => examples_upload_path, :enctype => "multipart/form-data", :method => "POST"}
+					%input{:name => "authenticity_token", :type => "hidden", :value => form_authenticity_token}
+					.row
+						.col-md-12
+							#dropzone.dropzone
+								Drop files here
+								%i.fa.fa-download-alt.pull-right
+					.row
+						.col-md-12.fileupload-progress.fade
+							/ The global progress bar
+							.progress.progress-xs.active{"aria-valuemax" => "100", "aria-valuemin" => "0", :role => "progressbar"}
+								.progress-bar.progress-bar-inverse{:style => "width:0%;"}
+							/ The extended global progress state
+							.progress-extended &nbsp;
+					/ The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload
+					.form-actions.fileupload-buttonbar.no-margin
+						/ The fileinput-button span is used to style the file input field as button
+						%span.btn.btn-default.fileinput-button.mr-xs
+							%i.glyphicon.glyphicon-plus
+							%span Add files...
+							%input{:multiple => "", :name => "files[]", :type => "file"}
+						%button.btn.btn-primary.start.mr-xs{:type => "submit"}
+							%i.glyphicon.glyphicon-upload
+							%span Start upload
+						%button.btn.btn-inverse.cancel{:type => "reset"}
+							%i.glyphicon.glyphicon-ban-circle
+							%span Cancel upload
+					/ The table listing the files available for upload/download
+					%table.table.table-striped{:role => "presentation"}
+						%tbody.files

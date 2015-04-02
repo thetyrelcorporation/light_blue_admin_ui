@@ -1,0 +1,55 @@
+%h2.page-title
+	Notifications
+	%small Transactional messages in your app
+.row
+	.col-md-12
+		%section.widget
+			%header
+				%h5
+					Messenger
+				.widget-controls
+					%a{:href => "#", :title => "Properties"}
+						%i.glyphicon.glyphicon-cog
+					%a{"data-widgster" => "expand", :href => "#", :title => "Expand"}
+						%i.glyphicon.glyphicon-plus
+					%a{"data-widgster" => "collapse", :href => "#", :title => "Collapse"}
+						%i.glyphicon.glyphicon-minus
+					%a{"data-widgster" => "close", :href => "#", :title => "Close"}
+						%i.glyphicon.glyphicon-remove
+			.body
+				.row
+					.col-md-4
+						%h4 Layout options
+						%p
+							There are few position options available for notifications. You can click any of them
+							to change notifications position:
+						.location-selector
+							.bit.top.left{"data-position" => "top left"}
+							.bit.top.right{"data-position" => "top right"}
+							.bit.top{"data-position" => "top"}
+							.bit.bottom.left{"data-position" => "bottom left"}
+							.bit.bottom.right{"data-position" => "bottom right"}
+							.bit.bottom{"data-position" => "bottom"}
+					.col-md-4
+						%h4 Notification Types
+						%p Different types of notifications for lost of use cases. Custom classes are also supported.
+						%p
+							%a#show-info-message.btn.btn-info{:href => "#"} Info Message
+						%p
+							%a#show-error-message.btn.btn-danger{:href => "#"} Error + Retry Message
+						%p
+							%a#show-success-message.btn.btn-success{:href => "#"} Success Message
+					.col-md-4
+						%h4 Dead Simple Usage
+						%p Just few lines of code to instantiate a notifications object. Does not require passing any options:
+						%pre
+							%code Messenger().post("Thanks for checking out Messenger!");
+						%p More complex example:
+						%pre
+							%code
+								:preserve
+									Messenger().post({
+											message: 'There was an explosion while processing your request.',
+											type: 'error',
+											showCloseButton: true
+									});      .loader-wrap.hiding.hide

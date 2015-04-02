@@ -1,0 +1,129 @@
+%h2.page-title
+	Invoice
+	%small Print optimized page
+%section.widget
+	.body.no-margin
+		.row
+			.col-sm-6.col-print-6
+				%img.invoice-logo{:alt => "Logo", :src => asset_path("logo.png")}
+			.col-sm-6.col-print-6
+				.invoice-number.text-align-right
+					\#4346345 / 6 Nov 2014
+				.invoice-number-info.text-align-right
+					Some Invoice number description or whatever
+		%hr
+			%section.invoice-info.well
+				.row
+					.col-sm-6.col-print-6
+						%h4.details-title Company Information
+						%h3.company-name
+							Wrapbootstrap LLC
+						%address
+							%strong 2 Infinite Loop
+							%br
+								Minsk, Belarus 220004
+								%br
+									088.253.5345
+									%br
+										%abbr{:title => "Work email"} e-mail:
+										%a{:href => "mailto:#"} email@example.com
+										%br
+											%abbr{:title => "Work Phone"} phone:
+											(012) 345-678-901
+											%br
+												%abbr{:title => "Work Fax"} fax:
+												(012) 678-132-901
+					.col-sm-6.col-print-6.client-details
+						%h4.details-title Client Information
+						%h3.client-name
+							Veronica Niasvizhskaja
+						%address
+							%strong Consultant
+							at
+							%strong
+								%a{:href => "#"} Allspana
+							%br
+								%abbr{:title => "Work email"} e-mail:
+								%a{:href => "mailto:#"} maryna@allspana.by
+								%br
+									%abbr{:title => "Work Phone"} phone:
+									(012) 345-678-901
+									%br
+										%abbr{:title => "Work Fax"} fax:
+										(012) 678-132-901
+										.separator.line
+										%p.margin-none
+											%strong Note:
+											%br
+												Some nights I stay up cashing in my bad luck.
+												Some nights I call it a draw
+			%table.table.table-bordered.table-striped
+				%thead
+					%tr
+						%th #
+						%th Item
+						%th.hidden-xs Description
+						%th Quantity
+						%th.hidden-xs Price per Unit
+						%th Total
+				%tbody
+					%tr
+						%td 1
+						%td Brand-new 27' monitor
+						%td.hidden-xs 2,560x1,440-pixel (WQHD) resolution supported!
+						%td 2
+						%td.hidden-xs 700
+						%td 1,400.00
+					%tr
+						%td 2
+						%td Domain: okendoken.com
+						%td.hidden-xs 6-month registration
+						%td 1
+						%td.hidden-xs 10.99
+						%td 21.88
+					%tr
+						%td 3
+						%td Atlas Shrugged
+						%td.hidden-xs Novel by Ayn Rand, first published in 1957 in the United States
+						%td 5
+						%td.hidden-xs 35
+						%td 175.00
+					%tr
+						%td 4
+						%td New Song by Dr. Pre
+						%td.hidden-xs Lyrics: praesent blandit augue non sapien ornare imperdiet
+						%td 1
+						%td.hidden-xs 2
+						%td 2.00
+			.row
+				.col-sm-6.col-print-6
+					%blockquote.blockquote-sm
+						%strong Note:
+						Keep in mind, sometimes bad things happen. But it's just sometimes.
+				.col-sm-6.col-print-6
+					.row.text-align-right
+						.col-xs-6
+						/ instead of offset
+						.col-xs-3
+							%p Subtotal
+							%p Tax(10%)
+							%p.no-margin
+								%strong Total
+						.col-xs-3
+							%p 1,598.88
+							%p 159.89
+							%p.no-margin
+								%strong 1,758.77
+			%p.text-align-right.mt-lg.mb-xs
+				Marketing Consultant
+			%p.text-align-right
+				%span.fw-semi-bold Bob Smith
+			.btn-toolbar.mt-lg.text-align-right.hidden-print
+				%button#print.btn.btn-default
+					%i.fa.fa-print
+					\&nbsp;&nbsp;
+					Print
+				%button.btn.btn-danger
+					Proceed with Payment
+					\&nbsp;
+					%i.fa.fa-arrow-right

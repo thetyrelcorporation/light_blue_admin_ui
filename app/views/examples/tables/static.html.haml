@@ -1,0 +1,423 @@
+%h2.page-title
+	Tables -
+	%span.fw-semi-bold Static
+.row
+	.col-md-12
+		%section.widget
+			%header
+				%h4
+					Table
+					%span.fw-semi-bold Styles
+				.widget-controls
+					%a{:href => "#"}
+						%i.glyphicon.glyphicon-cog
+					%a{"data-widgster" => "close", :href => "#"}
+						%i.glyphicon.glyphicon-remove
+			.body
+				%table.table.table-striped
+					%thead
+						%tr
+							%th.hidden-xs #
+							%th Picture
+							%th Description
+							%th.hidden-xs Info
+							%th.hidden-xs Date
+							%th.hidden-xs Size
+							%th
+					%tbody
+						%tr
+							%td.hidden-xs 1
+							%td
+								%img.img-rounded{:alt => "", :height => "50", :src => asset_path("1.jpg")}
+							%td
+								Palo Alto
+							%td.hidden-xs
+								%p.no-margin
+									%small
+										%span.fw-semi-bold Type:
+										%span.text-muted &nbsp; JPEG
+								%p
+									%small
+										%span.fw-semi-bold Dimensions:
+										%span.text-muted &nbsp; 200x150
+							%td.hidden-xs.text-muted
+								September 14, 2012
+							%td.hidden-xs.text-muted
+								45.6 KB
+							%td.width-150
+								.progress.progress-sm.mt-xs.js-progress-animate
+									.progress-bar.progress-bar-success{"data-width" => "29%", :style => "width: 0;"}
+						%tr
+							%td.hidden-xs 2
+							%td
+								%img.img-rounded{:alt => "", :height => "50", :src => asset_path("2.jpg")}
+							%td
+								The Sky
+							%td.hidden-xs
+								%p.no-margin
+									%small
+										%span.fw-semi-bold Type:
+										%span.text-muted &nbsp; PSD
+								%p
+									%small
+										%span.fw-semi-bold Dimensions:
+										%span.text-muted &nbsp; 2400x1455
+							%td.hidden-xs.text-muted
+								November 14, 2012
+							%td.hidden-xs.text-muted
+								15.3 MB
+							%td.width-150
+								.progress.progress-sm.mt-xs.js-progress-animate
+									.progress-bar.progress-bar-warning{"data-width" => "33%", :style => "width: 0;"}
+						%tr
+							%td.hidden-xs 3
+							%td
+								%img.img-rounded{:alt => "", :height => "50", :src => asset_path("3.jpg")}
+							%td
+								Down the road
+								%br
+									%span.label.label-danger INFO!
+							%td.hidden-xs
+								%p.no-margin
+									%small
+										%span.fw-semi-bold Type:
+										%span.text-muted &nbsp; JPEG
+								%p
+									%small
+										%span.fw-semi-bold Dimensions:
+										%span.text-muted &nbsp; 200x150
+							%td.hidden-xs.text-muted
+								September 14, 2012
+							%td.hidden-xs.text-muted
+								49.0 KB
+							%td.width-150
+								.progress.progress-sm.mt-xs.js-progress-animate
+									.progress-bar.progress-bar-gray{"data-width" => "38%", :style => "width: 0;"}
+						%tr
+							%td.hidden-xs 4
+							%td
+								%img.img-rounded{:alt => "", :height => "50", :src => asset_path("3.jpg")}
+							%td
+								The Edge
+							%td.hidden-xs
+								%p.no-margin
+									%small
+										%span.fw-semi-bold Type:
+										%span.text-muted &nbsp; PNG
+								%p
+									%small
+										%span.fw-semi-bold Dimensions:
+										%span.text-muted &nbsp; 210x160
+							%td.hidden-xs.text-muted
+								September 15, 2012
+							%td.hidden-xs.text-muted
+								69.1 KB
+							%td.width-150
+								.progress.progress-sm.mt-xs.js-progress-animate
+									.progress-bar.progress-bar-danger{"data-width" => "17%", :style => "width: 0;"}
+						%tr
+							%td.hidden-xs 5
+							%td
+								%img.img-rounded{:alt => "", :height => "50", :src => asset_path("11.jpg")}
+							%td
+								Fortress
+							%td.hidden-xs
+								%p.no-margin
+									%small
+										%span.fw-semi-bold Type:
+										%span.text-muted &nbsp; JPEG
+								%p
+									%small
+										%span.fw-semi-bold Dimensions:
+										%span.text-muted &nbsp; 1452x1320
+							%td.hidden-xs.text-muted
+								October 1, 2012
+							%td.hidden-xs.text-muted
+								2.3 MB
+							%td.width-150
+								.progress.progress-sm.mt-xs.js-progress-animate
+									.progress-bar{"data-width" => "41%", :style => "width: 0;"}
+				.clearfix
+					.pull-right
+						%button.btn.btn-default.btn-sm
+							Send to ...
+						.btn-group
+							%button.btn.btn-sm.btn-inverse.dropdown-toggle{"data-toggle" => "dropdown"}
+								\&nbsp; Clear &nbsp;
+								%i.fa.fa-caret-down
+							%ul.dropdown-menu.dropdown-menu-right
+								%li
+									%a{:href => "#"} Clear
+								%li
+									%a{:href => "#"} Move ...
+								%li
+									%a{:href => "#"} Something else here
+								%li.divider
+								%li
+									%a{:href => "#"} Separated link
+					%p Basic table with styled content
+.row
+	.col-md-6
+		%section.widget
+			%header
+				%h5
+					Table
+					%span.fw-semi-bold Styles
+				.widget-controls
+					%a{:href => "#"}
+						%i.glyphicon.glyphicon-cog
+					%a{"data-widgster" => "close", :href => "#"}
+						%i.glyphicon.glyphicon-remove
+			.widget-body
+				%h3
+					Stripped
+					%span.fw-semi-bold Table
+				%p
+					Each row is highlighted. You will never lost there. Just
+					%code .table-striped
+					it.
+				%table.table.table-striped
+					%thead
+						%tr
+							%th
+								.checkbox
+									%input#checkbox1{"data-check-all" => "", :type => "checkbox"}
+										%label{:for => "checkbox1"}
+							%th First Name
+							%th Last Name
+							%th Info
+					%tbody
+						%tr
+							%td
+								.checkbox
+									%input#checkbox2{:type => "checkbox"}
+										%label{:for => "checkbox2"}
+							%td Mark
+							%td Otto
+							%td
+								%span.label.label-danger Online
+						%tr
+							%td
+								.checkbox
+									%input#checkbox3{:type => "checkbox"}
+										%label{:for => "checkbox3"}
+							%td
+								Jacob
+								%span.label.label-warning.text-gray-dark.fw-semi-bold ALERT!
+							%td Thornton
+							%td
+								%span.label.bg-gray-light Away
+						%tr
+							%td
+								.checkbox
+									%input#checkbox4{:type => "checkbox"}
+										%label{:for => "checkbox4"}
+							%td Larry
+							%td the Bird
+							%td
+								%span.label.label-danger Construct
+				%br
+					%br
+						%h3
+							Hover
+							%span.fw-semi-bold Table
+						%p
+							Trace only what's really important.
+							%code .table-hover
+							is made for it.
+						.table-responsive
+							%table.table.table-hover
+								%thead
+									%tr
+										%th #
+										%th First Name
+										%th Last Name
+										%th Email
+										%th Status
+								%tbody
+									%tr
+										%td 1
+										%td Mark
+										%td Otto
+										%td
+											%a{:href => "#"} ottoto@example.com
+										%td
+											%span.badge.bg-gray-lighter.text-gray.fw-semi-bold Pending
+									%tr
+										%td 2
+										%td Jacob
+										%td Thornton
+										%td
+											%a{:href => "#"} fat.thor@example.com
+										%td
+											%span.badge.bg-gray-lighter.text-gray-light Unconfirmed
+									%tr
+										%td 3
+										%td Larry
+										%td the Bird
+										%td
+											%a{:href => "#"} larry@example.com
+										%td
+											%span.badge.bg-gray-lighter.text-gray.fw-semi-bold New
+									%tr
+										%td 4
+										%td Peter
+										%td Horadnia
+										%td
+											%a{:href => "#"} peter@example.com
+										%td
+											%span.badge.bg-gray-lighter.text-gray-light Active
+	.col-md-6
+		%section.widget
+			%header
+				%h5
+					Table
+					%span.fw-semi-bold Styles
+				.widget-controls
+					%a{:href => "#"}
+						%i.glyphicon.glyphicon-cog
+					%a{"data-widgster" => "close", :href => "#"}
+						%i.glyphicon.glyphicon-remove
+			.body
+				%h3
+					Bordered
+					%span.fw-semi-bold Table
+				%p
+					Each row is highlighted. You will never lost there. That's how
+					all of us learned in school the table should look like. Just add
+					%code .table-bordered
+					to it.
+				%table.table.table-bordered.table-lg.mt-lg.mb-0
+					%thead
+						%tr
+							%th
+								.checkbox
+									%input#checkbox10{"data-check-all" => "", :type => "checkbox"}
+										%label{:for => "checkbox10"}
+							%th Product
+							%th.text-align-right Price
+							%th.text-align-center Sales
+					%tbody
+						%tr
+							%td
+								.checkbox
+									%input#checkbox11{"data-check-all" => "", :type => "checkbox"}
+										%label{:for => "checkbox11"}
+							%td On the Road
+							%td.text-align-right $25 224.2
+							%td.text-align-center
+								.sparkline{"data-bar-color" => "#618fb0", "data-type" => "bar"} 13,14,16,15,4,14,20
+						%tr
+							%td
+								.checkbox
+									%input#checkbox12{"data-check-all" => "", :type => "checkbox"}
+										%label{:for => "checkbox12"}
+							%td HP Core i7
+							%td.text-align-right $87 346.1
+							%td.text-align-center
+								.sparkline{"data-bar-color" => "#999", "data-type" => "bar"} 14,12,16,11,17,19,16
+						%tr
+							%td
+								.checkbox
+									%input#checkbox13{"data-check-all" => "", :type => "checkbox"}
+										%label{:for => "checkbox13"}
+							%td Let's Dance
+							%td.text-align-right $57 944.6
+							%td.text-align-center
+								.sparkline{"data-bar-color" => "#f0b518", "data-type" => "bar"} 11,17,19,16,14,12,16
+						%tr
+							%td
+								.checkbox
+									%input#checkbox14{"data-check-all" => "", :type => "checkbox"}
+										%label{:for => "checkbox14"}
+							%td Air Pro
+							%td.text-align-right $118 533.1
+							%td.text-align-center
+								.sparkline{"data-bar-color" => "#e5603b", "data-type" => "bar"} 13,14,20,16,15,4,14
+						%tr
+							%td
+								.checkbox
+									%input#checkbox15{"data-check-all" => "", :type => "checkbox"}
+										%label{:for => "checkbox15"}
+							%td Version Control
+							%td.text-align-right $72 854.5
+							%td.text-align-center
+								.sparkline{"data-bar-color" => "#618fb0", "data-type" => "bar"} 16,15,4,14,13,14,20
+		%section.widget
+			%header
+				%h5
+					Table
+					%span.fw-semi-bold Styles
+				.widget-controls
+					%a{:href => "#"}
+						%i.glyphicon.glyphicon-cog
+					%a{"data-widgster" => "close", :href => "#"}
+						%i.glyphicon.glyphicon-remove
+			.body
+				%h3
+					Overflow
+					%span.fw-semi-bold Table
+				%p
+					Add any non-bordered .table within a widget for a seamless design.
+					Awesome look for no cost.
+					Just wrap the table with simple css class
+					%code .widget-table-overflow
+					inside
+					of widget
+			.widget-table-overflow
+				%table.table.table-striped.table-lg.mt-lg.mb-0
+					%thead.no-bd
+						%tr
+							%th
+								.checkbox
+									%input#checkbox210{"data-check-all" => "", :type => "checkbox"}
+										%label{:for => "checkbox210"}
+							%th Product
+							%th.text-align-right Price
+							%th.text-align-center Sales
+					%tbody
+						%tr
+							%td
+								.checkbox
+									%input#checkbox211{"data-check-all" => "", :type => "checkbox"}
+										%label{:for => "checkbox211"}
+							%td On the Road
+							%td.text-align-right $25 224.2
+							%td.text-align-center
+								.sparkline{"data-bar-color" => "#618fb0", "data-type" => "bar"} 13,14,16,15,4,14,20
+						%tr
+							%td
+								.checkbox
+									%input#checkbox212{"data-check-all" => "", :type => "checkbox"}
+										%label{:for => "checkbox212"}
+							%td HP Core i7
+							%td.text-align-right $87 346.1
+							%td.text-align-center
+								.sparkline{"data-bar-color" => "#999", "data-type" => "bar"} 14,12,16,11,17,19,16
+						%tr
+							%td
+								.checkbox
+									%input#checkbox213{"data-check-all" => "", :type => "checkbox"}
+										%label{:for => "checkbox213"}
+							%td Let's Dance
+							%td.text-align-right $57 944.6
+							%td.text-align-center
+								.sparkline{"data-bar-color" => "#f0b518", "data-type" => "bar"} 11,17,19,16,14,12,16
+						%tr
+							%td
+								.checkbox
+									%input#checkbox214{"data-check-all" => "", :type => "checkbox"}
+										%label{:for => "checkbox214"}
+							%td Air Pro
+							%td.text-align-right $118 533.1
+							%td.text-align-center
+								.sparkline{"data-bar-color" => "#e5603b", "data-type" => "bar"} 13,14,20,16,15,4,14
+						%tr
+							%td
+								.checkbox
+									%input#checkbox215{"data-check-all" => "", :type => "checkbox"}
+										%label{:for => "checkbox215"}
+							%td Version Control
+							%td.text-align-right $72 854.5
+							%td.text-align-center
+								.sparkline{"data-bar-color" => "#618fb0", "data-type" => "bar"} 16,15,4,14,13,14,20

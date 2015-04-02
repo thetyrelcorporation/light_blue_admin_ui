@@ -1,0 +1,101 @@
+%h2.page-title
+	Article Demo
+	%small Out of the box form
+.row
+	.col-lg-8
+		%section.widget
+			%header
+				%h4
+					%i.fa.fa-file-alt
+					Article
+					%small Create new or edit existing article
+			.body
+				%form#article-form.form-horizontal{"data-parsley-priority-enabled" => "false", :method => "post", :novalidate => "novalidate", :role => "form"}
+					%fieldset
+						.form-group
+							%label.col-sm-3.control-label{:for => "title"}
+								Title
+								%span.required *
+							.col-sm-9
+								%input#title.form-control.input-transparent{:name => "title", :required => "required", :type => "text"}
+						.form-group
+							%label.col-sm-3.control-label{:for => "content"}
+								Content
+							.col-sm-9
+								%textarea#content.form-control.input-transparent{:rows => "10"}
+						.form-group
+							%label.col-sm-3.control-label{:for => "description"} Description
+							.col-sm-9
+								%textarea#description.form-control.input-transparent{:name => "text", :rows => "3"}
+								%span.help-block Optional summary of your article that can be used in previews
+					.form-actions
+						.row
+							.col-sm-9.col-sm-offset-3
+								.btn-toolbar
+									%button.btn.btn-success{:type => "submit"} Submit
+									%button.btn.btn-default{:type => "button"} Cancel
+	.col-lg-4
+		%section.widget
+			%header
+				%h4
+					%i.fa.fa-cog
+					Options
+					%small Publishing, categories
+			.body
+				%form#article-options.form-horizontal.form-label-left{:method => "post"}
+					%fieldset
+						%legend.section Publishing
+						.form-group
+							%label.control-label.col-sm-4{:for => "article-status"} Status
+							.col-sm-8
+								%select#article-status.selectpicker{"data-style" => "btn-success", "data-width" => "auto", :name => "article-status"}
+									%option{:value => "0"} Draft
+									%option{:value => "1"} Published
+									%option{:value => "2"} Pending Review
+						.form-group
+							%label.control-label.col-sm-4{:for => "publish-date"} Publish at
+							.col-sm-8
+								%input#publish-date.form-control.date-picker{:name => "publish-date", :type => "text"}
+									%input#publish-time.form-control.mt-sm{:name => "publish-time", :type => "text"}
+						.form-group
+							%label.control-label.col-sm-4{:for => "article-language"} Language
+							.col-sm-8
+								%select#article-language.selectpicker{"data-style" => "btn-success", "data-width" => "auto", :name => "article-language"}
+									%option{:value => "0"} All Languages
+									%option{:value => "1"} English
+									%option{:value => "2"} Belarusian
+					%fieldset
+						%legend.section Category & Tags
+						.form-group
+							%label.control-label.col-sm-4{:for => "article-category"} Category
+							.col-sm-8
+								%select#article-category.selectpicker{"data-style" => "btn-warning", "data-width" => "auto", :name => "article-category"}
+									%option{:value => "0"} Design
+									%option{:value => "1"} Bootstrap
+									%option{:value => "2"} ThemeForest
+									%option{:value => "3"} Personal Developement
+						.form-group
+							%label.control-label.col-sm-4{:for => "article-tags"} Tags
+							.col-sm-8
+								%input#article-tags.select-block-level{:name => "article-tags", :type => "text"}
+									%span.help-block Write or select a tag and press "Enter" to add it.
+		%section.widget
+			%header
+				%h4
+					%i.fa.fa-key
+					Access
+			.body
+				%form#article-access.form-horizontal.form-label-left{:method => "post"}
+					%fieldset
+						.form-group
+							%label.control-label.col-sm-4{:for => "article-visibility"} Visibility
+							.col-sm-8
+								%select#article-visibility.selectpicker{"data-style" => "btn-warning", "data-width" => "auto", :name => "article-visibility"}
+									%option{:value => "0"} Everyone
+									%option{:value => "1"} Registered
+									%option{:value => "2"} Editors
+									%option{:value => "3"} Admins
+						.form-group
+							%label.control-label.col-sm-4{:for => "article-password"} Password
+							.col-sm-8
+								%input#article-password.form-control{:name => "article-password", :type => "password"}

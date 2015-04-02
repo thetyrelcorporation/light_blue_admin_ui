@@ -1,0 +1,17 @@
+.error-page.container
+	%main#content.error-container{:role => "main"}
+		.row
+			.col-lg-4.col-sm-6.col-xs-10.col-lg-offset-4.col-sm-offset-3.col-xs-offset-1
+				.error-container
+					%h1.error-code 404
+					%p.error-info
+						Opps, it seems that this page does not exist.
+					%p.error-help.mb
+						If you are sure it should, search for it.
+					.form-group
+						%input.form-control{:placeholder => "Search Pages", :type => "text"}
+					%a.btn.btn-transparent{:href => "special_search.html"}
+						Search
+						%i.fa.fa-search.text-warning.ml-xs
+	%footer.page-footer
+		2014 &copy; Light Blue. Admin Dashboard Template

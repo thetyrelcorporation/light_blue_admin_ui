@@ -1,0 +1,42 @@
+%h2.page-title
+	Media -
+	%span.fw-semi-bold Gallery
+	%small Images, videos and more
+.row
+	.col-md-10
+		%section.widget
+			%header
+				%h4
+					%i.fa.fa-star
+					Grid of images, videos, text, and more
+			.body
+				%ul#grid.row.thumbnails
+					- 5.times do
+						%li.col-sm-6
+							%a.thumbnail{:href => "http://lorempixel.com/1000/500/"}
+								%img{:alt => "", :src => "http://lorempixel.com/1000/500/"}
+.row
+	.col-md-10
+		%ul.row.thumbnails
+			%li.col-sm-4
+				.thumbnail
+					%img{:alt => "", :src => "http://lorempixel.com/1000/500/"}
+						.caption
+							%h4 Thumbnail label
+							%p
+								%strong You will never know exactly how something will go until you try it.
+								You can think three hundred times and still have no precise result...
+							%p
+								%a.btn.btn-danger{:href => "#"} Favorite
+								%a.btn.btn-inverse{:href => "#"} Read more...
+			%li.col-sm-4
+				.thumbnail
+					%img{:alt => "", :src => "http://lorempixel.com/1000/500/"}
+						.caption
+							%h4 Thumbnail label
+							%p
+								%strong You will never know exactly how something will go until you try it.
+								You can think three hundred times and still have no precise result...
+							%p
+								%a.btn.btn-danger{:href => "#"} Favorite
+								%a.btn.btn-inverse{:href => "#"} Read more...

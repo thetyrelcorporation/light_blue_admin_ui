@@ -1,0 +1,294 @@
+%h2.page-title
+	Buttons
+	%small Buttons, states and more
+.row
+	.col-md-6
+		%section.widget
+			%header
+				%h4
+					%i.fa.fa-star
+					Default buttons
+					%small
+						Classes on hover
+			.body.text-align-center
+				.well
+					.row
+						.col-xs-4
+							%button.btn.btn-default{"data-original-title" => ".btn .btn-default", "data-placement" => "top", :type => "button"}
+								Default
+						.col-xs-4
+							%button.btn.btn-primary{"data-original-title" => ".btn .btn-primary", "data-placement" => "top", :type => "button"}
+								Primary
+						.col-xs-4
+							%button.btn.btn-info{"data-original-title" => ".btn .btn-info", "data-placement" => "top", :type => "button"}
+								\&nbsp;Info&nbsp;
+				.well
+					.row
+						.col-xs-4
+							%button.btn.btn-success{"data-original-title" => ".btn .btn-success", "data-placement" => "top", :type => "button"}
+								Success
+						.col-xs-4
+							%button.btn.btn-warning{"data-original-title" => ".btn .btn-warning", "data-placement" => "top", :type => "button"}
+								Warning
+						.col-xs-4
+							%button.btn.btn-danger{"data-original-title" => ".btn .btn-danger", "data-placement" => "top", :type => "button"}
+								Danger
+				.well
+					.row
+						.col-xs-4.col-sm-offset-4
+							%button.btn.btn-inverse{"data-original-title" => ".btn .btn-inverse", "data-placement" => "top", :type => "button"}
+								Inverse
+		%section.widget
+			%header
+				%h4
+					%i.fa.fa-star
+					Small ones
+			.body.text-align-center
+				.well.well-sm.well-white
+					.row
+						.col-xs-4
+							%button.btn.btn-default.btn-sm{"data-original-title" => ".btn .btn-default .btn-sm", "data-placement" => "top", :type => "button"}
+								Default
+						.col-xs-4
+							%button.btn.btn-primary.btn-sm{"data-original-title" => ".btn .btn-primary .btn-sm", "data-placement" => "top", :type => "button"}
+								Primary
+						.col-xs-4
+							%button.btn.btn-info.btn-sm{"data-original-title" => ".btn .btn-info .btn-sm", "data-placement" => "top", :type => "button"}
+								\&nbsp;Info&nbsp;
+				.well.well-sm.well-white
+					.row
+						.col-xs-4
+							%button.btn.btn-success.btn-sm{"data-original-title" => ".btn .btn-success .btn-sm", "data-placement" => "top", :type => "button"}
+								Success
+						.col-xs-4
+							%button.btn.btn-warning.btn-sm{"data-original-title" => ".btn .btn-warning .btn-sm", "data-placement" => "top", :type => "button"}
+								Warning
+						.col-xs-4
+							%button.btn.btn-danger.btn-sm{"data-original-title" => ".btn .btn-danger .btn-sm", "data-placement" => "top", :type => "button"}
+								Danger
+				.well.well-sm.well-white
+					.row
+						.col-xs-4.col-sm-offset-4
+							%button.btn.btn-inverse.btn-sm{"data-original-title" => ".btn .btn-inverse .btn-sm", "data-placement" => "top", :type => "button"}
+								Inverse
+		%section.widget
+			%header
+				%h4
+					%i.fa.fa-star
+					Large ones
+			.body.text-align-center
+				.well
+					.row
+						.col-xs-4
+							%button.btn.btn-default.btn-lg{"data-original-title" => ".btn .btn-default .btn-lg", "data-placement" => "top", :type => "button"}
+								Default
+						.col-xs-4
+							%button.btn.btn-primary.btn-lg{"data-original-title" => ".btn .btn-primary .btn-lg", "data-placement" => "top", :type => "button"}
+								Primary
+						.col-xs-4
+							%button.btn.btn-info.btn-lg{"data-original-title" => ".btn .btn-info .btn-lg", "data-placement" => "top", :type => "button"}
+								\&nbsp;Info&nbsp;
+				.well
+					.row
+						.col-xs-4
+							%button.btn.btn-success.btn-lg{"data-original-title" => ".btn .btn-success .btn-lg", "data-placement" => "top", :type => "button"}
+								Success
+						.col-xs-4
+							%button.btn.btn-warning.btn-lg{"data-original-title" => ".btn .btn-warning .btn-lg", "data-placement" => "top", :type => "button"}
+								Warning
+						.col-xs-4
+							%button.btn.btn-danger.btn-lg{"data-original-title" => ".btn .btn-danger .btn-lg", "data-placement" => "top", :type => "button"}
+								Danger
+				.well
+					.row
+						.col-xs-4.col-sm-offset-4
+							%button.btn.btn-inverse.btn-lg{"data-original-title" => ".btn .btn-inverse .btn-lg", "data-placement" => "top", :type => "button"}
+								Inverse
+	.col-md-6
+		%section.widget
+			%header
+				%h4
+					%i.fa.fa-cogs
+					Options
+			.body
+				.well.well-sm
+					%blockquote.blockquote-sm Disabled state
+					.row.margin-bottom.text-align-center
+						.col-md-12
+							%button.btn.btn-default{:disabled => "disabled", :type => "button"}
+								Default
+							%button.btn.btn-primary{:disabled => "disabled", :type => "button"}
+								Primary
+							%button.btn.btn-info{:disabled => "disabled", :type => "button"}
+								\&nbsp; Info &nbsp;
+							%button.btn.btn-inverse{:disabled => "disabled", :type => "button"}
+								Inverse
+					.row.text-align-center
+						.col-md-12
+							%button.btn.btn-success{:disabled => "disabled", :type => "button"}
+								Success
+							%button.btn.btn-warning{:disabled => "disabled", :type => "button"}
+								Warning
+							%button.btn.btn-danger{:disabled => "disabled", :type => "button"}
+								Danger
+				.well.well-sm
+					%blockquote.blockquote-sm Button groups
+					.row.margin-bottom.text-align-center
+						.col-md-12
+							.btn-group
+								%button.btn.btn-primary{:type => "button"}
+									One
+								%button.btn.btn-primary{:type => "button"}
+									Two
+					.row.text-align-center
+						.col-md-12
+							%button.btn.btn-success{:type => "button"}
+								%i.fa.fa-align-left
+							%button.btn.btn-warning{:type => "button"}
+								%i.fa.fa-align-center
+							%button.btn.btn-danger{:type => "button"}
+								%i.fa.fa-align-right
+				.well.well-sm
+					%blockquote.blockquote-sm Button dropdown menus
+					.row.margin-bottom.text-align-center
+						.col-md-12
+							.btn-group
+								%button.btn.btn-danger.dropdown-toggle{"data-toggle" => "dropdown"}
+									\&nbsp; One &nbsp;
+									%i.fa.fa-caret-down
+								%ul.dropdown-menu
+									%li
+										%a{:href => "#"} Action
+									%li
+										%a{:href => "#"} Another action
+									%li
+										%a{:href => "#"} Something else here
+									%li.divider
+									%li
+										%a{:href => "#"} Separated link
+							.btn-group
+								%button.btn.btn-default.dropdown-toggle{"data-toggle" => "dropdown"}
+									\&nbsp; Two &nbsp;
+									%i.fa.fa-caret-down
+								%ul.dropdown-menu
+									%li
+										%a{:href => "#"} Action
+									%li
+										%a{:href => "#"} Another action
+									%li
+										%a{:href => "#"} Something else here
+									%li.divider
+									%li
+										%a{:href => "#"} Separated link
+							.btn-group
+								%button.btn.btn-warning.dropdown-toggle{"data-toggle" => "dropdown"}
+									\&nbsp; Three &nbsp;
+									%i.fa.fa-caret-down
+								%ul.dropdown-menu
+									%li
+										%a{:href => "#"} Action
+									%li
+										%a{:href => "#"} Another action
+									%li
+										%a{:href => "#"} Something else here
+									%li.divider
+									%li
+										%a{:href => "#"} Separated link
+				.well.well-sm
+					%blockquote.blockquote-sm Segmented dropdowns
+					.row.margin-bottom.text-align-center
+						.col-md-12
+							.btn-group
+								%button.btn.btn-default.btn-lg Gray
+								%button.btn.btn-default.btn-lg.dropdown-toggle{"data-toggle" => "dropdown"}
+									%i.fa.fa-caret-down
+								%ul.dropdown-menu
+									%li
+										%a{:href => "#"} Action
+									%li
+										%a{:href => "#"} Another action
+									%li
+										%a{:href => "#"} Something else here
+									%li.divider
+									%li
+										%a{:href => "#"} Separated link
+							.btn-group
+								%button.btn.btn-inverse White
+								%button.btn.btn-inverse.dropdown-toggle{"data-toggle" => "dropdown"}
+									%i.fa.fa-caret-down
+								%ul.dropdown-menu
+									%li
+										%a{:href => "#"} Action
+									%li
+										%a{:href => "#"} Another action
+									%li
+										%a{:href => "#"} Something else here
+									%li.divider
+									%li
+										%a{:href => "#"} Separated link
+							.btn-group
+								%button.btn.btn-info.btn-sm Blue
+								%button.btn.btn-info.btn-sm.dropdown-toggle{"data-toggle" => "dropdown"}
+									%i.fa.fa-caret-down
+								%ul.dropdown-menu
+									%li
+										%a{:href => "#"} Action
+									%li
+										%a{:href => "#"} Another action
+									%li
+										%a{:href => "#"} Something else here
+									%li.divider
+									%li
+										%a{:href => "#"} Separated link
+							.btn-group
+								%button.btn.btn-primary.btn-xs Teal
+								%button.btn.btn-primary.btn-xs.dropdown-toggle{"data-toggle" => "dropdown"}
+									%i.fa.fa-caret-down
+								%ul.dropdown-menu
+									%li
+										%a{:href => "#"} Action
+									%li
+										%a{:href => "#"} Another action
+									%li
+										%a{:href => "#"} Something else here
+									%li.divider
+									%li
+										%a{:href => "#"} Separated link
+				.well.well-sm
+					%blockquote.blockquote-sm Checkboxes
+					.row.margin-bottom.text-align-center
+						.col-md-12
+							.btn-group{"data-toggle" => "buttons"}
+								%label.btn.btn-default
+									%input{:type => "checkbox"}
+										Left way
+								%label.btn.btn-default
+									%input{:type => "checkbox"}
+										Middle way
+								%label.btn.btn-default
+									%input{:type => "checkbox"}
+										Right way
+				.well.well-sm
+					%blockquote.blockquote-sm Radio
+					.row.margin-bottom.text-align-center
+						.col-md-12
+							.btn-group{"data-toggle" => "buttons"}
+								%label.btn.btn-success
+									%input#option1{:name => "options", :type => "radio"}
+										Left way
+								%label.btn.btn-success
+									%input#option2{:name => "options", :type => "radio"}
+										Middle way
+								%label.btn.btn-success.active
+									%input#option3{:name => "options", :type => "radio"}
+										Right way
+				.well.well-sm
+					%blockquote.blockquote-sm Block level buttons
+					.row.margin-bottom.text-align-center
+						.col-md-8.col-md-offset-2
+							%button.btn.btn-lg.btn-warning.btn-block
+								Block level
+					.row.margin-bottom.text-align-center
+						.col-md-8.col-md-offset-2
+							%button.btn.btn-lg.btn-danger.btn-block
+								Block level

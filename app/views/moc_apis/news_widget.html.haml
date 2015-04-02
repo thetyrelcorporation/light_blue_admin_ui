@@ -1,0 +1,42 @@
+%ul.news-list.stretchable
+	%li.animated.fadeInDown.bg-addition
+		%span.icon.background-danger
+			%i.fa.fa-lock
+		.news-item-info
+			%h4.name
+				%a{:href => "#"} Just now! Check update time
+			%p
+				Check this news item timestamp. There is a small server part that generates current timestamp so it
+				would be easier for you to see ajax widgets in action
+			.time
+				<?php echo date("M j, H:i:s")?>
+	%li
+		%span.icon.background-warning
+			%i.fa.fa-star
+		.news-item-info
+			%h4.name
+				%a{:href => "#"} First Human Colony on Mars
+			%p
+				First 700 people will take part in building first human settlement outside of Earth.
+				That's awesome, right?
+			.time Mar 20, 18:46
+	%li
+		%span.icon.background-info
+			%i.fa.fa-microphone
+		.news-item-info
+			%h4.name
+				%a{:href => "#"} Light Blue reached $300
+			%p
+				Light Blue Inc. shares just hit $300 price. "This was inevitable. It should
+				have happen sooner or later" - says NYSE expert.
+			.time Sep 25, 11:59
+	%li
+		%span.icon.background-lime
+			%i.fa.fa-eye
+		.news-item-info
+			%h4.name
+				%a{:href => "#"} No more spying
+			%p
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+				incididunt ut labore et dolore magna aliqua.
+			.time Mar 20, 18:46

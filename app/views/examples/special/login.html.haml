@@ -1,0 +1,30 @@
+%section.widget.login-widget
+	%header.text-align-center
+		%h4 Login to your account
+	.body
+		%form.no-margin{:action => "index.html", :method => "get"}
+			%fieldset
+				.form-group
+					%label{:for => "email"} Email
+					.input-group
+						%span.input-group-addon
+							%i.fa.fa-user
+						%input#email.form-control.input-lg.input-transparent{:placeholder => "Your Email", :type => "email"}
+				.form-group
+					%label{:for => "password"} Password
+					.input-group.input-group-lg
+						%span.input-group-addon
+							%i.fa.fa-lock
+						%input#password.form-control.input-lg.input-transparent{:placeholder => "Your Password", :type => "password"}
+			.form-actions
+				%button.btn.btn-block.btn-lg.btn-danger{:type => "submit"}
+					%span.small-circle
+						%i.fa.fa-caret-right
+					%small Sign In
+				%a.forgot{:href => "#"} Forgot Username or Password?
+	%footer
+		.facebook-login
+			%a{:href => "index.html"}
+				%span
+					%i.fa.fa-facebook-square.fa-lg
+					LogIn with Facebook

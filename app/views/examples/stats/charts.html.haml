@@ -1,0 +1,40 @@
+%h2.page-title
+	Charts
+	%small Visual Charts & Graphs
+.row
+	.col-lg-3.col-sm-6
+		%section.widget.large
+			%header
+				%h4
+					%i.fa.fa-home
+					Top sources
+			.body
+				#sources-chart-pie.chart.pie-chart
+					%svg
+			%footer#data-chart-footer.pie-chart-footer
+	.col-lg-9.col-sm-6
+		%section.widget.large
+			%header
+				%h4
+					%i.fa.fa-bar-chart-o
+					Bar Chart
+					%small.hidden-xs{:style => "display: inline !important;"} Refresh page to see different data
+			#sources-chart-bar.body.chart
+				%svg
+.row
+	.col-md-6
+		%section.widget.large
+			%header
+				%h4
+					%i.fa.fa-bullhorn
+					Stream Stacked Chart
+			#sources-chart-stacked.body.chart
+				%svg
+	.col-md-6
+		%section.widget.large
+			%header
+				%h4
+					%i.fa.fa-arrow-circle-o-right
+					Line Chart
+			#sources-chart-line.body.chart
+				%svg

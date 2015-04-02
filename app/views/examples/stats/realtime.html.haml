@@ -1,0 +1,16 @@
+%h2.page-title
+	Realtime Chart
+	%small Realtime data
+.row
+	.col-md-10.offset1
+		%section.widget
+			%header
+				%h4
+					%i.fa.fa-user
+					Visitors by Countries
+			.body.row
+				.col-sm-2
+					#legend
+				#chart-container.col-sm-10
+					#realtime-chart{:style => "height: 300px;"}
+					#timeline

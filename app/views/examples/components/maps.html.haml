@@ -1,0 +1,58 @@
+%h2.page-title
+	Maps
+	%small Built-in google & vector maps
+.row
+	.col-md-6
+		%section.widget.large
+			%header
+				%h4
+					%i.fa.fa-google-plus
+					Google maps. Basic
+			.body
+				.map
+					#basic
+	.col-md-6
+		%section.widget.large
+			%header
+				%h4
+					%i.fa.fa-map-marker
+					Address and location
+				.actions
+					%input#address.input-transparent.form-control.mt-n-xs{:placeholder => "Enter Address", :type => "text"}
+			.body
+				.map
+					#location
+.row
+	.col-md-6
+		%section.widget.large
+			%header
+				%h4
+					%i.fa.fa-arrow-right
+					Region vector map
+				.actions
+					%select#part.selectpicker{"data-style" => "btn-success btn-sm", "data-width" => "auto"}
+						%option{:value => "europe_en"} Europe
+						%option{:value => "usa_en"} USA
+						%option{:value => "australia_en"} Australia
+			.body
+				.map
+					#vector-detailed
+	.col-md-6
+		%section.widget.large
+			%header
+				%h4
+					%i.fa.fa-dashboard
+					World vector map
+			.body
+				.map
+					#vector-world
+#myModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+	.modal-dialog
+		.modal-content
+			.modal-header
+				%button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} &times;
+				%h4.modal-title Modal title
+			.modal-body
+				%p One fine body…
+			.modal-footer
+				%button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} OK

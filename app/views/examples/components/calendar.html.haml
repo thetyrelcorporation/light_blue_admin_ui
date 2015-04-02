@@ -1,0 +1,76 @@
+%h2.page-title
+	Components -
+	%span.fw-semi-bold Calendar App
+	%small Draggable access
+.row
+	.col-md-8
+		%section.widget
+			%header
+				%h4
+					%i.fa.fa-calendar
+					Calendar
+				.actions
+					.btn-group.mr-sm
+						%button#calender-prev.btn.btn-default
+							%i.fa.fa-angle-left
+						%button#calender-next.btn.btn-default
+							%i.fa.fa-angle-right
+					%button#today.btn.btn-warning.mr-sm{:type => "button"}
+						Today
+					#calendar-switcher.btn-group{"data-toggle" => "buttons"}
+						%label.btn.btn-default.active
+							%input{:checked => "", :name => "view", :type => "radio", :value => "month"}
+								Month
+						%label.btn.btn-default
+							%input{:name => "view", :type => "radio", :value => "agendaWeek"}
+								Week
+						%label.btn.btn-default
+							%input{:name => "view", :type => "radio", :value => "agendaDay"}
+								Day
+			.body
+				#calendar.calendar.mt-lg           .col-md-4
+		%section.widget
+			%header
+				%h5
+					%i.fa.fa-exchange
+					Draggable events
+			.body
+				#external-events
+					.external-event.bg-danger{"data-event-class" => "bg-danger text-white"}
+						%i.fa.fa-check
+						Buy this template
+					.external-event.bg-warning{"data-event-class" => "bg-warning text-white"} Study some Node
+					.external-event.bg-success{"data-event-class" => "bg-success text-white"} Make a tea
+					.external-event.bg-primary{"data-event-class" => "bg-primary text-white"}
+						%i.fa.fa-book
+						Go to school
+					.external-event.bg-info{"data-event-class" => "bg-info text-white"} Open windows
+#myModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+	.modal-dialog.modal-sm
+		.modal-content
+			.modal-header
+				%button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} &times;
+				%h4.modal-title Modal title
+			.modal-body
+				%p One fine body…
+			.modal-footer
+				%button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} OK
+		/ /.modal-content
+	/ /.modal-dialog
+/ /.modal
+#edit-modal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+	.modal-dialog.modal-sm
+		.modal-content
+			.modal-header
+				%button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} &times;
+				%h4.modal-title Modal title
+			.modal-body
+				.form-group
+					%label{:for => "event-name"} Event name
+					%input#event-name.form-control.bg-gray-lighter{:name => "name", :type => "text"}
+			.modal-footer
+				%button.btn.btn-default{"data-dismiss" => "modal"} Cancel
+				%button#create-event.btn.btn-success{"data-dismiss" => "modal"} OK
+		/ /.modal-content
+	/ /.modal-dialog
+/ /.modal

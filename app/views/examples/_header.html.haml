@@ -1,0 +1,117 @@
+%header.page-header
+	.navbar
+		%ul.nav.navbar-nav.navbar-right.pull-right
+			%li.visible-phone-landscape
+				%a#search-toggle{:href => "#"}
+					%i.fa.fa-search
+			%li.dropdown
+				%a#messages.dropdown-toggle{"data-toggle" => "dropdown", :href => "#", :title => "Messages"}
+					%i.fa.fa-comments
+				%ul#messages-menu.dropdown-menu.messages{:role => "menu"}
+					%li{:role => "presentation"}
+						%a.message{:href => "#"}
+						= image_tag "1.jpg"
+						.details
+							.sender Jane Hew
+							.text
+								Hey, John! How is it going? ...
+					%li{:role => "presentation"}
+						%a.message{:href => "#"}
+						= image_tag "2.jpg"
+						.details
+							.sender Alies Rumiancaŭ
+							.text
+								I'll definitely buy this template
+					%li{:role => "presentation"}
+						%a.message{:href => "#"}
+							= image_tag "3.jpg"
+							.details
+								.sender Michał Rumiancaŭ
+								.text
+									Is it really Lore ipsum? Lore ...
+					%li{:role => "presentation"}
+						%a.text-align-center.see-all{:href => "#"}
+							See all messages
+							%i.fa.fa-arrow-right
+			%li.dropdown
+				%a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#", :title => "8 support tickets"}
+					%i.fa.fa-group
+					%span.count 8
+				%ul#support-menu.dropdown-menu.support{:role => "menu"}
+					%li{:role => "presentation"}
+						%a.support-ticket{:href => "#"}
+							.picture
+								%span.label.label-important
+									%i.fa.fa-bell-o
+							.details
+								Check out this awesome ticket
+					%li{:role => "presentation"}
+						%a.support-ticket{:href => "#"}
+							.picture
+								%span.label.label-warning
+									%i.fa.fa-question-circle
+							.details
+								"What is the best way to get ...
+					%li{:role => "presentation"}
+						%a.support-ticket{:href => "#"}
+							.picture
+								%span.label.label-success
+									%i.fa.fa-tag
+							.details
+								This is just a simple notification
+					%li{:role => "presentation"}
+						%a.support-ticket{:href => "#"}
+							.picture
+								%span.label.label-info
+									%i.fa.fa-info-circle
+							.details
+								12 new orders has arrived today
+					%li{:role => "presentation"}
+						%a.support-ticket{:href => "#"}
+							.picture
+								%span.label.label-important
+									%i.fa.fa-plus
+							.details
+								One more thing that just happened
+					%li{:role => "presentation"}
+						%a.text-align-center.see-all{:href => "#"}
+							See all tickets
+							%i.fa.fa-arrow-right
+			%li.divider
+			%li.hidden-xs
+				%a#settings{"data-placement" => "bottom", "data-toggle" => "popover", :href => "#", :title => "Settings"}
+					%i.fa.fa-cog
+			%li.hidden-xs.dropdown
+				%a#account.dropdown-toggle{"data-toggle" => "dropdown", :href => "#", :title => "Account"}
+					%i.fa.fa-user
+				%ul#account-menu.dropdown-menu.account{:role => "menu"}
+					%li.account-picture{:role => "presentation"}
+						= image_tag "3.jpg"
+						Philip Daineka
+					%li{:role => "presentation"}
+						%a.link{:href => "form_account.html"}
+							%i.fa.fa-user
+							Profile
+					%li{:role => "presentation"}
+						%a.link{:href => "component_calendar.html"}
+							%i.fa.fa-calendar
+							Calendar
+					%li{:role => "presentation"}
+						%a.link{:href => "#"}
+							%i.fa.fa-inbox
+							Inbox
+			%li.visible-xs
+				%a.btn-navbar{"data-target" => ".sidebar", "data-toggle" => "collapse", :href => "#", :title => ""}
+					%i.fa.fa-bars
+			%li.hidden-xs
+				%a{:href => "login.html"}
+					%i.fa.fa-sign-out
+		%form#search-form.navbar-form.pull-right{:role => "search"}
+			%input.form-control.search-query{:placeholder => "Search...", :type => "search"}
+		.notifications.pull-right
+			.alert.pull-right
+				%a.close.ml-xs{"data-dismiss" => "alert", :href => "#"} &times;
+				%i.fa.fa-info-circle.mr-xs
+				Check out Light Blue
+				%a#notification-link{:href => "#"} settings
+				on the right!

@@ -1,0 +1,74 @@
+%h2.page-title
+	List -
+	%span.fw-semi-bold Groups
+.row
+	.col-md-10
+		%h4 Closest stars
+		%ol.list-group.list-group-outer.sortable.list-group-sortable
+			%li.list-group-item
+				%i.fa.fa-sort
+				%a.close{"aria-hidden" => "true", "data-dismiss" => "alert", :href => "#"} &times;
+				\&nbsp;&nbsp;&nbsp; 03 &nbsp;&nbsp;&nbsp;
+				Barnard's Star
+			%li.list-group-item
+				%i.fa.fa-sort
+				%a.close{"aria-hidden" => "true", "data-dismiss" => "alert", :href => "#"} &times;
+				\&nbsp;&nbsp;&nbsp; 01 &nbsp;&nbsp;&nbsp;
+				The Sun
+			%li.list-group-item
+				%i.fa.fa-sort
+				%a.close{"aria-hidden" => "true", "data-dismiss" => "alert", :href => "#"} &times;
+				\&nbsp;&nbsp;&nbsp; 04 &nbsp;&nbsp;&nbsp;
+				Wolf 359
+			%li.list-group-item
+				%i.fa.fa-sort
+				%a.close{"aria-hidden" => "true", "data-dismiss" => "alert", :href => "#"} &times;
+				\&nbsp;&nbsp;&nbsp; 02 &nbsp;&nbsp;&nbsp;
+				Proxima Centauri
+			%li.list-group-item
+				%i.fa.fa-sort
+				%a.close{"aria-hidden" => "true", "data-dismiss" => "alert", :href => "#"} &times;
+				\&nbsp;&nbsp;&nbsp; 05 &nbsp;&nbsp;&nbsp;
+				Lalande 21185
+		%br/
+		%h4.page-title Nestable List
+		.row
+			.col-md-6
+				#nestable1.dd
+					%ol.dd-list
+						%li.dd-item{"data-id" => "1"}
+							.dd-handle Item 1
+						%li.dd-item{"data-id" => "2"}
+							.dd-handle Item 2
+							%ol.dd-list
+								%li.dd-item{"data-id" => "3"}
+									.dd-handle Item 3
+								%li.dd-item{"data-id" => "4"}
+									.dd-handle Item 4
+								%li.dd-item{"data-id" => "5"}
+									.dd-handle Item 5
+									%ol.dd-list
+										%li.dd-item{"data-id" => "6"}
+											.dd-handle Item 6
+										%li.dd-item{"data-id" => "7"}
+											.dd-handle Item 7
+										%li.dd-item{"data-id" => "8"}
+											.dd-handle Item 8
+								%li.dd-item{"data-id" => "9"}
+									.dd-handle Item 9
+			.col-md-6
+				#nestable2.dd
+					%ol.dd-list
+						%li.dd-item{"data-id" => "13"}
+							.dd-handle Item 13
+						%li.dd-item{"data-id" => "14"}
+							.dd-handle Item 14
+						%li.dd-item{"data-id" => "15"}
+							.dd-handle Item 15
+							%ol.dd-list
+								%li.dd-item{"data-id" => "16"}
+									.dd-handle Item 16
+								%li.dd-item{"data-id" => "17"}
+									.dd-handle Item 17
+								%li.dd-item{"data-id" => "18"}
+									.dd-handle Item 18
